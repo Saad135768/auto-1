@@ -1,0 +1,11 @@
+#footer {
+  height: 80px;
+  padding: 10px;
+  border-top: var(--border-style)
+}
+
+#footer p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}

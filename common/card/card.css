@@ -1,0 +1,69 @@
+.card-container {
+  border: var(--border-style);
+  padding: 12px;
+  margin: 24px 0;
+}
+
+.card-container span:first-of-type {
+  margin-top: 20px !important;
+  margin-left: 10px !important;
+}
+
+.card-container #car-title {
+  font-size: var(--bold-font);
+  color: var(--text-color);
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.card-container #car-desc {
+  font-size: var(--lg-font);
+  color: var(--text-color);
+}
+
+.card-container a {
+  color: var(--main-color);
+}
+
+.card-container a:hover {
+  text-decoration: underline;
+}
+
+.card-container svg {
+  font-size: var(--bold-font);
+  cursor: pointer;
+}
+
+.card-container #filled-fav-icon path {
+  color: var(--main-color)
+}
+
+/* This is for the favourites page, in order to make all the cards with an even height */
+#favs {
+  height: 95%;
+  margin: 10px 0;
+}
+
+/* Loader skelton effect */
+.loader #car-title {
+  background-color: #e4e4e4;
+  height: 35px;
+}
+
+.loader #car-desc {
+  background-color: #e4e4e4;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.loader a {
+  background-color: #e4e4e4;
+  height: 15px;
+  width: 20%;
+  display: block;
+}
+
+.loader .row span:first-of-type {
+  background-color: #e4e4e4 !important;
+  margin-top: 0 !important;
+}

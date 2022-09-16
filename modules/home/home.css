@@ -1,0 +1,6 @@
+@media(max-width: 767px){
+  main .col {
+    text-align: center;
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,34 @@
+#not-found-section {
+  display: flex;
+  justify-content: center;
+  
+}
+
+#not-found-section div{
+ margin-top: 30px;
+ text-align: center;
+ color: var(--text-color)
+}
+
+#not-found-section img{
+  cursor: pointer;
+}
+
+#not-found-section h2{
+ font-size: var(--bold-font);
+ margin: 10px 0;
+ font-weight: bold;
+}
+
+#not-found-section p{
+ font-size: var(--lg-font);
+ margin: 10px 0;
+}
+
+#not-found-section a{
+ color: var(--main-color);
+}
+
+#not-found-section a:hover{
+ text-decoration: underline;
+}

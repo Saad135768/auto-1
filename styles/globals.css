@@ -1,0 +1,42 @@
+@import url('../modules/layout/navbar/navbar.css');
+@import url('../modules/layout/footer/footer.css');
+@import url('../modules/home/filters/filters.css');
+@import url('../modules/home/home.css');
+@import url('../modules/404/404.css');
+@import url('../modules/singleCar/singleCar.css');
+@import url('../common/card/card.css');
+@import url('../common/button/button.css');
+@import url('../common/pagination/pagination.css');
+
+:root {
+  --main-color: #EA7F28;
+  --selected-color: #D37324;
+  --text-color: #4A4A4A;
+  --secondary-color: #EDEDED;
+  --bold-font: 32px;
+  --lg-font: 18px;
+  --regular-font: 14px;
+  --small-font: 12px;
+  --border-style: 4px solid #f7f7f7;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color)
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#wrapper {
+  min-height: 800px;
+}

@@ -1,0 +1,13 @@
+#main-btn {
+  height: 32px;
+  width: 128px;
+  border: 0;
+  background-color: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+}
+
+#main-btn:hover {
+  background-color: var(--selected-color);
+  
+}

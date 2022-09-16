@@ -1,0 +1,33 @@
+
+#navbar {
+  margin: 20px 0;
+  padding: 10px;
+  min-height: 80px;
+  border-bottom: #f7f7f7 2px solid;
+}
+
+#navbar img {
+  cursor: pointer;
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+#navbar ul a:hover {
+  text-decoration: underline;
+  color: var(--main-color)
+}
+
+#navbar ul svg {
+  color: var(--main-color)
+}
+
+@media(max-width: 767px){
+  #navbar .col:first-of-type {
+    text-align: center;
+    margin: 10px 0;
+  }
+}
