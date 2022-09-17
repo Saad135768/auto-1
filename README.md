@@ -21,7 +21,7 @@ A fully-dynamic, fully responsive Cars app. Where the user can preview & filter 
 
 
 ## Project structure
-  ### modules (This holds the components; where every page has a folder, inside each folder got all the components used solely inside this page)
+  ##### modules (This holds the components; where every page has a folder, inside each folder got all the components used solely inside this page)
 
   + home
     -- index.js
@@ -39,7 +39,7 @@ A fully-dynamic, fully responsive Cars app. Where the user can preview & filter 
   + 404
     ++index.js
 
-### common (This holds the components used multiple times across the app)
+##### common (This holds the components used multiple times across the app)
 
   __button
     __ index.js
@@ -50,9 +50,9 @@ A fully-dynamic, fully responsive Cars app. Where the user can preview & filter 
   __wrapper
     __ index.js
 
-### pages (Those are used as the routing for each page)
+##### pages (Those are used as the routing for each page)
 
-### styles (This holds the main style file, where all the other styling files are imported inside the global.css)
+##### styles (This holds the main style file, where all the other styling files are imported inside the global.css)
   __ global.css
 ### Approach Documentation
 ##### What is covered
