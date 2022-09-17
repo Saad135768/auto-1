@@ -18,8 +18,6 @@ A fully-dynamic, fully responsive Cars app. Where the user can preview & filter 
   ```
   npm run dev
   ``` 
-
-
 ## Project structure
   ##### modules (This holds the components; where every page has a folder, inside each folder got all the components used solely inside this page)
 
@@ -60,3 +58,7 @@ A fully-dynamic, fully responsive Cars app. Where the user can preview & filter 
 - Next.js & typescript For overall development
 - Bootstrap for styling
 - axios & serverside rendering for data fetching
+- react-select
+- ramda
+- jest & react-testing-library for testing
+- react-toastify

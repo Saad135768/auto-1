@@ -4,7 +4,7 @@ import Select from 'react-select'
 import { IFilters, IReactSelect } from '../../../interfaces'
 import Button from '../../../common/button'
 
-const Filters: FC<IFilters> = ({ manufacturers, colors = [] }) => {
+const Filters: FC<IFilters> = ({ manufacturers = [], colors = [] }) => {
   const [colorValue, setColorValue] = useState('')
   const [manufacturersValue, setManufacturersValue] = useState('')
   const [sortbyValue, setSortbyValue] = useState('')

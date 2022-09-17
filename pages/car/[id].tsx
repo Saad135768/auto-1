@@ -1,12 +1,15 @@
 import React from 'react'
+import { GetServerSideProps } from 'next'
+import type { NextPage } from 'next'
 import axios from 'axios'
 import Car from '../../modules/singleCar'
+import { ICar } from '../../interfaces'
 
-const SingleCar = ({ car }) => <Car car={car} />
+const SingleCar: NextPage<{ car: ICar }> = ({ car }) => <Car car={car} />
 
 export default SingleCar
 
-export const getServerSideProps = async ({ query : { id } }) => {
+export const getServerSideProps: GetServerSideProps = async ({ query : { id } }) => {
   let carsData = {}
 
   try {

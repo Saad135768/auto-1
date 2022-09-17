@@ -9,11 +9,4 @@ describe('Home component', () => {
     expect(avaliableCarsText).toBeInTheDocument()
   })
 
-  test('renders cards components if the request succeeds', async () => {
-    render(<Home />)
-    const cardElements = await screen.findAllByTestId('card-container')
-    expect(cardElements).not.toHaveLength(0)
-  })
-
-
 })

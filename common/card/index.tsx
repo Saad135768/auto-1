@@ -14,11 +14,13 @@ const Card: FC<ICard> = ({ modelName, manufacturerName, stockNumber, mileage: { 
   const [favIconSelected, setFavIconSelected] = useState<boolean>(false)
   
   useEffect(() => {
+    // I access the local storage here, since local storage is accessible only in the client side.
+
     const favs = localStorage?.getItem('favourites')
     // This checks if this product exsits in the local storage aka. favourites
     const productInFavourites = favs && JSON.parse(favs).filter((car) => car?.stockNumber === stockNumber)?.length
 
-    // here we set the products found in the local storage
+    // here I set products in the fav list, in order to render the filled fav icon
     setFavIconSelected(!!productInFavourites)
   }, [])
 
