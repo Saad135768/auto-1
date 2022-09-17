@@ -2,12 +2,11 @@ import React from 'react'
 import Link from 'next/link'
 import Router from 'next/router'
 import { Container, Row, Col } from 'react-bootstrap'
-import logo from '../../../public/assets/imgs/logo.png'
 import Image from 'next/image'
 import { AiFillHeart } from 'react-icons/ai'
+import logo from '../../../public/assets/imgs/logo.png'
 
-const Navbar = () => {
-  return (
+const Navbar = () => (
     <nav id={'navbar'}>
       <Container>
           <Row>
@@ -46,6 +45,5 @@ const Navbar = () => {
       </Container>
     </nav>
   )
-}
 
 export default Navbar

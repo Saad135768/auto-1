@@ -29,9 +29,14 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: var(--main-color);
 }
+
+a:hover{
+  color: var(--main-color);
+  text-decoration: underline;
+ }
 
 * {
   box-sizing: border-box;

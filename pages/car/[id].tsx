@@ -11,7 +11,6 @@ export const getServerSideProps = async ({ query : { id } }) => {
 
   try {
     const { data : { car } } = await axios(`${process.env.REACT_APP_API_URL}/cars/${id}`)
-    console.log(car)
     carsData = car
   }
   

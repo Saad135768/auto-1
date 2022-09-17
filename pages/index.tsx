@@ -1,8 +1,13 @@
+import React from 'react'
+import type { NextPage } from 'next'
 import Head from 'next/head'
 import Home from '../modules/home'
 import axios from 'axios'
+import { GetServerSideProps } from 'next'
+import { IHome } from '../interfaces'
 
-const HomePage = ({ cars, manufacturers, colors }) => (
+const HomePage: NextPage<IHome> = ({ cars, manufacturers, colors }) => {
+  return (
     <div>
       <Head>
         <title>Auto-1 group</title>
@@ -12,10 +17,10 @@ const HomePage = ({ cars, manufacturers, colors }) => (
       <Home carsData={cars} manufacturers={manufacturers} colors={colors} />
       </div>
   )
-
+  }
 export default HomePage
 
-export const getServerSideProps = async ({ query: { sort = '', page = 1, color = '', manufacturer= '' } }) => {
+export const getServerSideProps: GetServerSideProps = async ({ query: { sort = '', page = 1, color = '', manufacturer= '' } }) => {
   let cars = []
   let manufacturers = []
   let colors = []

@@ -1,15 +1,25 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
-import Filters from './filters'
 import { Container, Row, Col } from 'react-bootstrap'
+import { useRouter } from 'next/router'
+import { pathOr, propOr } from 'ramda'
+import axios from 'axios'
+import Filters from './filters'
 import Pagination from '../../common/pagination'
 import Card from '../../common/card'
-import { useRouter } from 'next/router'
-import axios from 'axios'
+import { ICar } from '../../interfaces'
 
 const Home = ({ carsData, manufacturers, colors }) => {
   const [cars, setCars] = useState(carsData)
   const [loading, setLoading] = useState(false)
-  const { query: { page = 1, sort = '', color = '', manufacturer = '' } } = useRouter()
+  
+  const page = pathOr(1, ['query', 'page'], useRouter())
+  const sort = pathOr('', ['query', 'sort'], useRouter())
+  const color = pathOr('', ['query', 'color'], useRouter())
+  const manufacturer = pathOr('', ['query', 'manufacturer'], useRouter())
+
+  const totalCarsCount = +pathOr(0, ['totalCarsCount'], cars)
+  const pageSize = 10
 
   const fetchCars = async () => {
     try {
@@ -39,8 +49,8 @@ const Home = ({ carsData, manufacturers, colors }) => {
           </Col>
           <Col>
             <h3>Avaliable Cars</h3>
-            <h2>Showing 10 of {cars?.totalCarsCount} results</h2>
-            {cars?.cars?.map(({ modelName, stockNumber, mileage, fuelType, color, pictureUrl }) => 
+            <h2>Showing {+totalCarsCount < +pageSize ? totalCarsCount : pageSize} of {totalCarsCount} results</h2>
+            {pathOr([], ['cars'], cars).map(({ modelName, stockNumber, manufacturerName, mileage, fuelType, color, pictureUrl }: ICar) => 
             <Card 
               key={stockNumber} 
               modelName={modelName} 
@@ -48,11 +58,14 @@ const Home = ({ carsData, manufacturers, colors }) => {
               mileage={mileage} 
               fuelType={fuelType} 
               color={color} 
-              img={pictureUrl}
+              pictureUrl={pictureUrl}
+              manufacturerName={manufacturerName}
               loading={loading}
             />
             )}
-           {!!cars?.cars?.length && <Pagination pagesCount={cars?.totalPageCount} />}
+
+           {!!pathOr(false, ['cars', 'length'], cars) && <Pagination pagesCount={cars?.totalPageCount} />}
+
           </Col>
         </Row>
       </Container>

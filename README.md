@@ -38,8 +38,12 @@ A fully-dynamic, fully responsive Cars app. Where the user can preview & filter 
 
 ##### pages (Those are used as the routing for each page)
 
+#### interfaces
+
 ##### styles (This holds the main style file, where all the other styling files are imported inside the global.css)
   + global.css
+
+
 ### Approach Documentation
 ##### What is covered
 - Separate components are prepared for every section
@@ -53,5 +57,6 @@ A fully-dynamic, fully responsive Cars app. Where the user can preview & filter 
 - Optimzation and best practices were implemented.
 
 ##### Framework/Libraries used
-- Next.js For overall development
+- Next.js & typescript For overall development
 - Bootstrap for styling
+- axios & serverside rendering for data fetching

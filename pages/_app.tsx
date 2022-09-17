@@ -1,3 +1,5 @@
+import React from 'react'
+import type { AppProps } from 'next/app'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -6,7 +8,8 @@ import Footer from '../modules/layout/footer'
 import Wrapper from '../common/wrapper'
 import '../styles/globals.css'
 
-const MyApp = ({ Component, pageProps }) => (
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  return (
   <>
   <ToastContainer 
     position="top-center"
@@ -26,5 +29,5 @@ const MyApp = ({ Component, pageProps }) => (
     <Footer />
   </>
 )
-
+  }
 export default MyApp

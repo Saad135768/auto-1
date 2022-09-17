@@ -3,17 +3,7 @@
   padding: 12px 24px
 }
 
-#aside div {
-  margin-bottom: 12px
-}
-
 #filter-btn-container{
   display: flex;
   justify-content: flex-end;
-}
-
-#aside select option{
-  padding: 8px;
-  box-shadow: 0 0 10px 100px red inset;
-  color: var(--main-color);
 }

@@ -4,8 +4,7 @@ import Router from 'next/router'
 import Link from 'next/link'
 import logo from '../../public/assets/imgs/logo.png'
 
-const NotFound = () => {
-  return (
+const NotFound = () => (
     <section id='not-found-section'>
       <div className='my-5'>
         <Image src={logo} alt='auto-1 logo' width={180} height={40} onClick={() => Router.push('/')} />
@@ -15,6 +14,5 @@ const NotFound = () => {
       </div>
     </section>
   )
-}
 
 export default NotFound
