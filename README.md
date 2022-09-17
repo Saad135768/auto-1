@@ -24,25 +24,17 @@ A fully-dynamic, fully responsive Cars app. Where the user can preview & filter 
   ##### modules (This holds the components; where every page has a folder, inside each folder got all the components used solely inside this page)
 
   + home
-    > filters
   + favourites
   + layout
-    >navbar
-    <br/>
-    >footer
   + singleCar
   + 404
 
 ##### common (This holds the components used multiple times across the app)
 
-  +button
-    >index.js
-  +card
-    >index.js
-  +pagination
-    >index.js
-  +wrapper
-    >index.js
+  + button
+  + card
+  + pagination
+  + wrapper
 
 ##### pages (Those are used as the routing for each page)
 
