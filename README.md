@@ -22,23 +22,25 @@ A fully-dynamic, fully responsive Cars app. Where the user can preview & filter 
 
 ## Project structure
 __ modules (This holds the components; where every page has a folder, inside each folder got all the components used solely inside this page)
-  __ home
-    __ index.js
-    __ filters
-      __ index.js
-  __ favourites
-    __ index.js
-  __ layout
-    __navbar
-      __index.js
-    __footer
-      __index.js
-  __ singleCar
-    __index.js
-  __ 404
-    __index.js
+
+  + home
+    ++ index.js
+    ++ filters
+      +++ index.js
+  + favourites
+    ++ index.js
+  + layout
+    ++navbar
+      +++index.js
+    ++footer
+      +++index.js
+  + singleCar
+    ++index.js
+  + 404
+    ++index.js
 
 __ common (This holds the components used multiple times across the app)
+
   __button
     __ index.js
   __card
