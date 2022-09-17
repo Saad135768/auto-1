@@ -42,3 +42,8 @@ export interface IFilters {
   manufacturers: IManufacturer[]
   colors: IColor[]
 }
+
+export interface IReactSelect {
+  value: string
+  label: string
+}

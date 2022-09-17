@@ -1,8 +1,7 @@
 import React, { useState, FC } from 'react'
 import Router from 'next/router'
-import { Form } from 'react-bootstrap'
 import Select from 'react-select'
-import { IFilters } from '../../../interfaces'
+import { IFilters, IReactSelect } from '../../../interfaces'
 import Button from '../../../common/button'
 
 const Filters: FC<IFilters> = ({ manufacturers, colors = [] }) => {
@@ -10,7 +9,7 @@ const Filters: FC<IFilters> = ({ manufacturers, colors = [] }) => {
   const [manufacturersValue, setManufacturersValue] = useState('')
   const [sortbyValue, setSortbyValue] = useState('')
 
-  const handleChange = (event: { value: string, label: string }, setState: (value: string) => void) => {
+  const handleChange = (event: IReactSelect, setState: (value: string) => void) => {
     setState(event?.value)
   }
   
@@ -40,7 +39,7 @@ const Filters: FC<IFilters> = ({ manufacturers, colors = [] }) => {
           classNamePrefix="select"
           isSearchable
           styles={selectStyle}
-          onChange={(e) => handleChange(e, setColorValue)}
+          onChange={(e: IReactSelect) => handleChange(e, setColorValue)}
           name="color"
           options={colorsOptions}
         />
@@ -54,7 +53,7 @@ const Filters: FC<IFilters> = ({ manufacturers, colors = [] }) => {
           isSearchable
           styles={selectStyle}
           name="manufacturer"
-          onChange={(e) => handleChange(e, setManufacturersValue)}
+          onChange={(e: IReactSelect) => handleChange(e, setManufacturersValue)}
           options={manufacturersOptions}
         />
       </div>
@@ -66,7 +65,7 @@ const Filters: FC<IFilters> = ({ manufacturers, colors = [] }) => {
           classNamePrefix="select"
           isSearchable
           styles={selectStyle}
-          onChange={(e) => handleChange(e, setSortbyValue)}
+          onChange={(e: IReactSelect) => handleChange(e, setSortbyValue)}
           name="sortby"
           options={sortbyOptions}
         />

@@ -21,7 +21,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     pauseOnFocusLoss
     draggable
     pauseOnHover 
-   />
+  />
     <Navbar />
     <Wrapper>
       <Component {...pageProps} />
