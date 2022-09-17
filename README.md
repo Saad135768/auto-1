@@ -28,6 +28,7 @@ A fully-dynamic, fully responsive Cars app. Where the user can preview & filter 
   + favourites
   + layout
     >navbar
+    <br/>
     >footer
   + singleCar
   + 404
