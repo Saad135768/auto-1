@@ -1,34 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Description
 
-## Getting Started
+A fully-dynamic, fully responsive Cars app. Where the user can preview & filter all cars, beside adding cars to his favourites.
 
-First, run the development server:
+### Prerequistes
+- NPM
+- GIT
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### How to Setup: 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone the repository and checkout to `main` branch
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+2. Install the dependecny packages
+  ```
+  npm i
+  ``` 
+3. Run the project
+  ```
+  npm run dev
+  ``` 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Project structure
+__ modules (This holds the components; where every page has a folder, inside each folder got all the components used solely inside this page)
+  |__ home
+    ||__ index.js
+    ||__ filters
+      |||__ index.js
+  |__ favourites
+    ||__ index.js
+  |__ layout
+    ||__navbar
+      |||__index.js
+    ||__footer
+      |||__index.js
+  |__ singleCar
+    ||__index.js
+  |__ 404
+    ||__index.js
 
-## Learn More
+__ common (This holds the components used multiple times across the app)
+  |__button
+    ||__ index.js
+  |__card
+    ||__ index.js
+  |__pagination
+    ||__ index.js
+  |__wrapper
+    ||__ index.js
 
-To learn more about Next.js, take a look at the following resources:
+__ pages (Those are used as the routing for each page)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+__ styles (This holds the main style file, where all the other styling files are imported inside the global.css)
+  |__ global.css
+### Approach Documentation
+##### What is covered
+- Separate components are prepared for every section
+- Every component holds its own index and styling file
+- All styling files are imported inside the global.css in the styles folder
+- common components folder is created, where it holds the components used in multiple places across the app.
+- Server side fetching were used.
+- A favourite icon is added to the navbar, as a route to the favourites page.
+- A favourites page was added as place, where the user can view all the products he added to his favourite list; using localStorage as a mimic for the DB.
+- The user can add/or remove product from the favourite list through the fav icon in each card, or by navigating to the car's single page and press the save button.
+- Optimzation and best practices were implemented.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+##### Framework/Libraries used
+- Next.js For overall development
+- Bootstrap for styling
