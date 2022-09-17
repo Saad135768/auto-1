@@ -21,10 +21,10 @@ A fully-dynamic, fully responsive Cars app. Where the user can preview & filter 
 
 
 ## Project structure
-__ modules (This holds the components; where every page has a folder, inside each folder got all the components used solely inside this page)
+  ### modules (This holds the components; where every page has a folder, inside each folder got all the components used solely inside this page)
 
   + home
-    ++ index.js
+    -- index.js
     ++ filters
       +++ index.js
   + favourites
@@ -39,7 +39,7 @@ __ modules (This holds the components; where every page has a folder, inside eac
   + 404
     ++index.js
 
-__ common (This holds the components used multiple times across the app)
+### common (This holds the components used multiple times across the app)
 
   __button
     __ index.js
@@ -50,9 +50,9 @@ __ common (This holds the components used multiple times across the app)
   __wrapper
     __ index.js
 
-__ pages (Those are used as the routing for each page)
+### pages (Those are used as the routing for each page)
 
-__ styles (This holds the main style file, where all the other styling files are imported inside the global.css)
+### styles (This holds the main style file, where all the other styling files are imported inside the global.css)
   __ global.css
 ### Approach Documentation
 ##### What is covered
