@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap'
 const Footer = () => (
   <footer id='footer'>
     <Container>
-      <p>&copy; AUTO 1 Group 2018</p>
+      <p>&copy; Cars app 2018</p>
     </Container>
   </footer>
 )

@@ -11,7 +11,7 @@ const Navbar = () => (
       <Container>
           <Row>
             <Col>
-              <Image src={logo} alt='auto-1 logo' width={180} height={40} onClick={() => Router.push('/')} />
+              <Image src={'https://www.iconsdb.com/icons/preview/orange/car-xxl.png'} alt='auto-1 logo' width={180} height={80} onClick={() => Router.push('/')} />
             </Col>
 
             <Col md={{ span: 4, offset: 2 }}>

@@ -6,6 +6,11 @@
   border-bottom: #f7f7f7 2px solid;
 }
 
+#navbar .row {
+  align-items: center;
+}
+
+
 #navbar img {
   cursor: pointer;
 }
