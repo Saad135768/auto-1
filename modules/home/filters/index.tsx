@@ -1,13 +1,20 @@
 import React, { useState, FC } from 'react'
-import Router from 'next/router'
+import Router, { useRouter } from 'next/router'
 import Select from 'react-select'
+import { pathOr } from 'ramda'
 import { IFilters, IReactSelect } from '../../../interfaces'
 import Button from '../../../common/button'
 
 const Filters: FC<IFilters> = ({ manufacturers = [], colors = [] }) => {
-  const [colorValue, setColorValue] = useState('')
-  const [manufacturersValue, setManufacturersValue] = useState('')
-  const [sortbyValue, setSortbyValue] = useState('')
+
+  const sort = pathOr('', ['query', 'sort'], useRouter())
+  const color = pathOr('', ['query', 'color'], useRouter())
+  const manufacturer = pathOr('', ['query', 'manufacturer'], useRouter())
+
+
+  const [colorValue, setColorValue] = useState(color)
+  const [manufacturersValue, setManufacturersValue] = useState(manufacturer)
+  const [sortbyValue, setSortbyValue] = useState(sort)
 
   const handleChange = (event: IReactSelect, setState: (value: string) => void) => {
     setState(event?.value)
@@ -39,6 +46,7 @@ const Filters: FC<IFilters> = ({ manufacturers = [], colors = [] }) => {
           classNamePrefix="select"
           isSearchable
           styles={selectStyle}
+          defaultValue={colorsOptions?.find(({ value }) => value === color)}
           onChange={(e: IReactSelect) => handleChange(e, setColorValue)}
           name="color"
           options={colorsOptions}
@@ -52,6 +60,7 @@ const Filters: FC<IFilters> = ({ manufacturers = [], colors = [] }) => {
           classNamePrefix="select"
           isSearchable
           styles={selectStyle}
+          defaultValue={manufacturersOptions?.find(({ value }) => value === manufacturer)}
           name="manufacturer"
           onChange={(e: IReactSelect) => handleChange(e, setManufacturersValue)}
           options={manufacturersOptions}
@@ -65,6 +74,7 @@ const Filters: FC<IFilters> = ({ manufacturers = [], colors = [] }) => {
           classNamePrefix="select"
           isSearchable
           styles={selectStyle}
+          defaultValue={sortbyOptions?.find(({ value }) => value === sort)}
           onChange={(e: IReactSelect) => handleChange(e, setSortbyValue)}
           name="sortby"
           options={sortbyOptions}
